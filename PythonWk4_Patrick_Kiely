@@ -1,0 +1,90 @@
+#!/usr/bin/python3
+# Copyright 2017 PK Inc.
+
+feet = 5280*13
+print('13 MILES is equal to ',feet, 'feet')
+
+seconds = (7*3600) + (21*60) + 37
+print('7 hours, 21 minutes and 37 seconds equals', seconds, 'seconds')
+
+area= 4*7
+print('rectangle of dimensions 4x7 has area of',area,'square inches!') 
+
+age= 35
+joe= 'Joe Bloggs'
+print(joe, 'is', str(age), 'years old')
+
+def miles_to_feet():
+  miles = input(">")
+  miles1 = int(miles)
+  
+ # if miles.isdigit == True:
+  feet = int(miles)*5280
+  print((miles1), 'miles equals', (feet), 'feet')
+ # else:
+  #  print ('Enter a number')
+
+def total_seconds():
+  hours = input("Hours: ")
+  minutes = input("Minutes: ")
+  seconds = input("Seconds: ")
+  total = ((int(hours)*3600) + (int(minutes)*60) + int(seconds))
+  print ((hours), 'hours', (minutes), 'minutes', (seconds), 'seconds equals', (total), 'seconds in total')
+
+def distance_formula():
+  print('Enter x and y values, seperated by a comma. (x,y)')
+  x1y1 = input("x,y: ")
+  x2y2 = input("another x,y: ")
+  x1y1A = x1y1.split(',')
+  x2y2A = x2y2.split(',')
+  x1 = int(x1y1A[0])
+  y1 = int(x1y1A[1])
+  x2 = int(x2y2A[0])
+  y2 = int(x2y2A[1])
+  
+  distance = int(pow(pow((int(x2)-int(x1)),2) + pow((int(y2)-int(y1)),2),.5))
+  
+  print(distance)
+
+def is_even():
+  x = input("x= ")
+  x = int(x)
+  print (x%2==0  )
+
+
+def interval_intersect():
+  a = input("a= ")
+  a = int(a)
+  b = input("b= ")
+  b = int(b)
+  c = input("c= ")
+  c = int(c)
+  d = input("d= ")
+  d = int(d)
+
+  print ((a<c) and (b>c))
+
+#def age_check():
+#  name = input("name: ")
+#  age = input("age: ")
+#  if int(age) < 1 :
+#    print('Invalid age entered')
+#  else :
+#    print ('%s is %s years old' % (name, age)
+
+#commented out this function as there were too many running and the programme wouldn't work
+
+
+
+
+# Calls the above functions input prompts.
+def main():
+  miles_to_feet()
+  total_seconds()
+  distance_formula()
+  is_even()
+  interval_intersect()
+  #age_check()
+
+if __name__ == '__main__':
+  main()
